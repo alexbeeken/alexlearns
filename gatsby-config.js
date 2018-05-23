@@ -7,7 +7,7 @@ module.exports = {
     disqusShortname: '',
     menu: [
       {
-        label: 'Notes',
+        label: 'Home',
         path: '/'
       },
       {

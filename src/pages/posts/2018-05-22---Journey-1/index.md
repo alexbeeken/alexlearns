@@ -1,9 +1,9 @@
 ---
-title: The Journey Ahead
+title: "The Journey Ahead: Part 1"
 date: "2018-05-22"
 layout: post
 draft: false
-path: "/posts/starting-out/"
+path: "/posts/journey-1/"
 category: "Meta"
 tags:
   - "Meta"
