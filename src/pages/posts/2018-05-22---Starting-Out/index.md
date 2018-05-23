@@ -3,7 +3,7 @@ title: The Journey Ahead
 date: "2018-05-22"
 layout: post
 draft: false
-path: "/posts/the-journey-ahead/"
+path: "/posts/starting-out/"
 category: "Meta"
 tags:
   - "Meta"

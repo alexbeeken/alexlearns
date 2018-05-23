@@ -23,6 +23,11 @@ class Links extends React.Component {
             </a>
           </li>
           <li className="links__list-item">
+            <a href={`https://www.twitter.com/${links.twitter}`}>
+              <i className="icon-twitter" />
+            </a>
+          </li>
+          <li className="links__list-item">
             <a href={`mailto:${links.email}`}>
               <i className="icon-mail" />
             </a>
