@@ -3,7 +3,7 @@ module.exports = {
     url: 'https://www.alexlearns.org',
     title: 'Alex Learns',
     subtitle: 'Alex gets a computer science education.',
-    copyright: '© All rights reserved.',
+    copyright: '2018 © All rights reserved.',
     disqusShortname: '',
     menu: [
       {
