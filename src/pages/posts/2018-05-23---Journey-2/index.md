@@ -1,12 +1,12 @@
 ---
-title: "The Journey Ahead: Part 2"
+title: "The Journey Ahead Part 2: The Time Commitment"
 date: "2018-05-23"
 layout: post
 draft: false
 path: "/posts/journey-2/"
-category: "Meta"
+category: "Study"
 tags:
-  - "Meta"
+  - "Study"
 description: "How do you plan out a self paced curriculum?"
 ---
 

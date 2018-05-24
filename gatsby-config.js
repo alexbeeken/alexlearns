@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     url: 'https://www.alexlearns.org',
     title: 'Alex Learns',
-    subtitle: 'Alex gets a computer science education.',
-    copyright: '2018 © All rights reserved.',
+    subtitle: 'Software Engineer',
+    copyright: '© 2018 All rights reserved.',
     disqusShortname: '',
     menu: [
       {

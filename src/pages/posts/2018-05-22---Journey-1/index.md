@@ -1,12 +1,12 @@
 ---
-title: "The Journey Ahead: Part 1"
+title: "The Journey Ahead Part 1: But why tho?"
 date: "2018-05-22"
 layout: post
 draft: false
 path: "/posts/journey-1/"
-category: "Meta"
+category: "Study"
 tags:
-  - "Meta"
+  - "Study"
 description: "What is this website and why am I doing this?"
 ---
 
