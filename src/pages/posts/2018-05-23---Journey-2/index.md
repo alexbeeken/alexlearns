@@ -7,7 +7,7 @@ path: "/posts/journey-2/"
 category: "Study"
 tags:
   - "Study"
-description: "How do you plan out a self paced curriculum?"
+description: "How long will this take?"
 ---
 
 ## The Time Frame
