@@ -3,14 +3,12 @@ title: "Getting a Free Computer Science Education: Part 1"
 date: "2018-05-22"
 layout: post
 draft: false
-path: "/posts/journey-1/"
+path: "/posts/getting-a-free-computer-science-education-1/"
 category: "Study"
 tags:
   - "Study"
 description: "What is this website and why am I doing this?"
 ---
-
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](./1.jpg)
 
 ## Backstory
 
@@ -31,6 +29,10 @@ This requires money though and money is something that I could have if I was bor
 > Life is to be lived.
 <br>
 > \- Alex (stays in most nights)
+
+Enter the OSSU (bows down on the floor in prayer.)
+
+![The Open Source Society University logo](https://camo.githubusercontent.com/ab1e7ce255025d6c6b9431d43409217c21f70b6a/687474703a2f2f692e696d6775722e636f6d2f6b5959435874432e706e67)
 
 Last week, in a stroke of genius, I googled "How to Get a Free Computer Science Degree" and came across this [github repo](https://github.com/ossu/computer-science). Apparently, the OSSU put together this guide to getting a complete education in computer science through free online courses and , hey look, cs50 is on there. Well, my programming roots are in MOOCs and I love free education.
 

@@ -3,7 +3,7 @@ title: "Getting a Free Computer Science Education: Part 3"
 date: "2018-05-24"
 layout: post
 draft: false
-path: "/posts/journey-3/"
+path: "/posts/getting-a-free-computer-science-education-3/"
 category: "Study"
 tags:
   - "Study"
@@ -12,7 +12,7 @@ description: "Which classes and when?"
 
 ## Sequences
 
-We established in my [last post](/posts/journey-2/) that my self study adventure will take approximately 2 years to complete if I study 16 hours a week.
+We established in my [last post](/posts/getting-a-free-computer-science-education-2/) that my self study adventure will take approximately 2 years to complete if I study 16 hours a week.
 
 But it's a little more complicated than that. The classes are organized into different subjects and usually depend on other classes. Organizing the pre-requisite dependencies into __sequences__, we have the following:
 #### Coding
@@ -165,5 +165,9 @@ So at the end of the day, achievement comes down to self esteem. Let yourself fa
 > \- Alex (motivational writer)
 
 Thanks for reading. I think I'll make a progress bar indicator that will sit below my profile picture next. (Hey isn't this Gatsby Lumen site nifty?)
+
+LETS GET STARTED!!!
+
+![gif of a little boy who is unreasonable excited](https://media.giphy.com/media/3oEduOnl5IHM5NRodO/giphy.gif)
 
 \- Alex

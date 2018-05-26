@@ -3,7 +3,7 @@ title: "Getting a Free Computer Science Education: Part 2"
 date: "2018-05-23"
 layout: post
 draft: false
-path: "/posts/journey-2/"
+path: "/posts/getting-a-free-computer-science-education-2/"
 category: "Study"
 tags:
   - "Study"
@@ -12,7 +12,7 @@ description: "How long will this take?"
 
 ## The Time Frame
 
-As you might have read in my [last post](/posts/starting-out), I want to be more better edukated with [these open source computer science classes.](https://github.com/ossu/computer-science). This is a huge commitment. I will need to act as my own professor, advisor and career counselor all at once.
+As you might have read in my [last post](/posts/getting-a-free-computer-science-education-1/), I want to be more better edukated with [these open source computer science classes.](https://github.com/ossu/computer-science). This is a huge commitment. I will need to act as my own professor, advisor and career counselor all at once.
 
 So, I slipped between the Google Sheets to help get an idea of the scope of this undertaking. The estimated __minimum__ number of hours to complete the program is __1302.3__. Why minimum? I think I'll come in closer to the minimum because I already have some experience in the industry. In fact, a lot of early classes, I will be learning notation and the "academic way" of thinking about things I already have experience with. Full disclosure, I have also taken Precalculus and Calculus 1 within the last 2 years in formal college classrooms.
 
