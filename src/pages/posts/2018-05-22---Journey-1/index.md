@@ -1,5 +1,5 @@
 ---
-title: "The Journey Ahead Part 1: But why tho?"
+title: "Getting a Free Computer Science Education: Part 1"
 date: "2018-05-22"
 layout: post
 draft: false

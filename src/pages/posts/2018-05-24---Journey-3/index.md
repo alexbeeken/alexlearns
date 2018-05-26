@@ -1,5 +1,5 @@
 ---
-title: "The Journey Ahead Part 3: Curriculum"
+title: "Getting a Free Computer Science Education: Part 3"
 date: "2018-05-24"
 layout: post
 draft: false
@@ -78,7 +78,7 @@ Anyway, I tried a few different ways to come up with a calendar or exact schedul
 - If a course is difficult and I fall behind, I might have to delay the end date. This is not good, extra time should be accounted for in the timeline. I would have to basically just guess which courses are going to be more difficult.
 - It's extremely time consuming just to build a calendar for this thing much less update and share it.
 
-But I want to have a __timeline__ to measure my progress and keep myself on track. Having the guideline will be super important so I always know how my work is fitting into the overall goal. This also prevents me from getting lost in any one course and losing sight of the overall goal. It's easy for me to get lost in rabbit holes, following impulses instead of long term goals.
+But I want to at least know what I'm going to be doing ahead of time. Having the guideline will be super important so I always know how my work is fitting into the overall goal. This also prevents me from getting lost in any one course subject. It's easy for me to get lost in rabbit holes, following impulses instead of long term goals.
 
 ## Magic Bag
 
@@ -121,13 +121,17 @@ You could see how this algorithm could be used to generate a schedule that I cou
 
 It will be good to set __some kind of a time based goal__ for the completion of this project. It will help add a level of accountability. I'll have to see what exactly this entails once I get started. Perhaps after one month, I'll come back and see what kind of progress I've made.
 
-I just need a way to keep track of the __hours spent working every week__, specifying the course worked on, and __a percentage of completion__ on each course. With these two metrics it becomes really simple to predict a completion date.
+I just need a way to keep track of the __hours spent working every week__, specifying the course worked on, and __a percentage of completion__ on each course. With these two metrics it becomes really simple to predict a completion date and just compare it to the course timeline.
 
 ```
 estimated weeks left = (total hours spent / (units completed / total units)) / weekly budget
 ```
 
 The weekly budget is 16 right now but that could change once I get started.
+
+Comparing the project completion date to the course's syllabus timeline should serve as a good guiding goal. If the course says 13 weeks and my project completion time is 18 weeks, I know that I might need to pick it up. If my projected completion is 9 weeks, then I should try to keep that pace and finish early.
+
+The overall goal timeline for the courses will stay at roughly __1.5 years__ as outlined in part 2.
 
 ## Why Measure?
 
@@ -160,6 +164,6 @@ So at the end of the day, achievement comes down to self esteem. Let yourself fa
 > Let yourself fail.<br>
 > \- Alex (motivational writer)
 
-Thanks for reading. I think I'll make a progress bar indicator that will sit below my profile picture next. (Hey isn't this Gatsby Lumen site cool?)
+Thanks for reading. I think I'll make a progress bar indicator that will sit below my profile picture next. (Hey isn't this Gatsby Lumen site nifty?)
 
 \- Alex

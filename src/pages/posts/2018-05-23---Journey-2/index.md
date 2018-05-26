@@ -1,5 +1,5 @@
 ---
-title: "The Journey Ahead Part 2: The Time Commitment"
+title: "Getting a Free Computer Science Education: Part 2"
 date: "2018-05-23"
 layout: post
 draft: false
