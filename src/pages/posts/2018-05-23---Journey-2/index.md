@@ -24,7 +24,7 @@ Let's say, and this is purely hypothetical, that I have a life and a full time j
 
 Does this make me feel discouraged? At first glance, hells yeah. But at second glance, 1.5 years isn't that much time. 1.5 years ago, I was the same person I am today. I had the same dreams about going to school that I have today. In fact, I did take a few online classes that I never finished. Do I appreciate the work that I did 1.5 years ago? hells yeah. Will I appreciate this work in 10 years? 100%.
 
-![No Ragrets tattood on someone's chest](https://taintedtats.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/n/o/no-ragrets-temporary-tattoo-tt0218.jpg)
+![No Ragrets tattoo design - ragrats is spelled wrong  which is pretty ironic for a tattoo](https://taintedtats.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/n/o/no-ragrets-temporary-tattoo-tt0218.jpg)
 
 *NO RAGRETS!*
 
