@@ -16,4 +16,13 @@ It got better. I improved but I ended up voluntarily quitting after 2 years. I w
 
 But when I moved away, I found myself coding all the time... and not in a "oh shoot, I need to get another tech job" sort of way. I was enjoying it. Why was I enjoying it so much? Well, with no team to lean on, I was tasting the sweet sweet nectar of independence for the first time in a long time. You see, the Mono Lake Committee is located in Lee Vining. Lee Vining is a "city" of 400 people seated right outside the East Entrance to Yosemite. Sometimes I was just lucky to have wifi. This forced me to really take time and thoroughly learn... and to always setup a comprehensive offline dev environment.
 
-I moved back to Portland in Fall of 2017 where I've been working on personal projects and gaining more independence as a programmer. One of the things I worked on is the social email service: [Spotlife](http://www.splotlife.club).
+I moved back to Portland in Fall of 2017 where I've been working on personal projects and gaining more independence as a programmer.
+
+Here's a bunch of things that I've done if you want to creep on me more:
+
+- [Spotlife](http://www.splotlife.club)
+- [General Youtube](https://www.youtube.com/channel/UC-s3pM-zRauVNJ32Lce1ujQ)
+- [Mr. Beeken](https://www.youtube.com/channel/UCtZ04kW3xThhfO4PCfvGaNQ)
+- [Soundcloud](https://soundcloud.com/aeb242)
+- [Portfolio](http://www.alexbeeken.com)
+- [Improv Comedy Group](http://www.boxfactory.fun)

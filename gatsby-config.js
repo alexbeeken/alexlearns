@@ -13,10 +13,6 @@ module.exports = {
       {
         label: 'About',
         path: '/about'
-      },
-      {
-        label: 'Hire Me',
-        path: '/hire-me'
       }
     ],
     author: {
@@ -25,7 +21,7 @@ module.exports = {
       telegram: 'alexbeeken',
       github: 'alexbeeken',
       twitter: 'BeekenAlex',
-      rss: '#',
+      rss: 'alexbeeken',
       vk: '#'
     }
   },
