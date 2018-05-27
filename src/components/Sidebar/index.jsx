@@ -2,6 +2,7 @@ import React from 'react';
 import get from 'lodash/get';
 import Link from 'gatsby-link';
 import Menu from '../Menu';
+import Progress from '../Progress';
 import Links from '../Links';
 import profilePic from '../../pages/stencil-alex.png';
 import './style.scss';
@@ -50,6 +51,7 @@ class Sidebar extends React.Component {
             <p className="sidebar__copyright">
               {copyright}
             </p>
+            <Progress />
           </div>
         </div>
       </div>
