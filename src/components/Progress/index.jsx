@@ -2,17 +2,18 @@ import React from 'react';
 import Link from 'gatsby-link';
 import './style.scss';
 import data from './data.js';
-import CourseProgressBar from '../CourseProgressBar';
+import ProgressBar from '../ProgressBar';
 
 class Progress extends React.Component {
   render() {
-    const { courses } = data.courses;
+    const { courses, overall } = data;
 
     return (
-      <div className="progress">
-        Currently Studying:
+      <div className='progress'>
+        <ProgressBar course={overall} />
+        currently taking:
         {data.courses.map(function(course) {
-          return <CourseProgressBar course={course} />
+          return <ProgressBar course={course} key={course.name} />
         })}
       </div>
     );

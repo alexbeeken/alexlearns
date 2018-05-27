@@ -10,5 +10,10 @@ module.exports = {
       unitsCompleted: 0,
       units: 15
     }
-  ]
+  ],
+  overall: {
+    name: 'Progress on Free CS Degree',
+    unitsCompleted: 0,
+    units: 0
+  }
 };
