@@ -68,7 +68,7 @@ which looks like this:
 	<div class='item' style='border: 2px solid black; width: 150px; height: 150px; margin: 20px;'>11</div>
 </div>
 
-But hey, this isn't scrollable and it's __compressing the boxes__ to fit in the width of the screen! Oh noooo!
+But hey, this isn't scrollable and it's __compressing the boxes__ trying to fit in the width of the screen! Oh noooo!
 
 <img src='https://media.giphy.com/media/xT5LMLMPdRh2VRNVLi/giphy.gif' style='max-width: 100%' alt='Homer Simpsons saying "oh no" in despair.'>
 </img>
