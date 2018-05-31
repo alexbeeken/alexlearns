@@ -70,7 +70,8 @@ which looks like this:
 
 But hey, this isn't scrollable and it's __compressing the boxes__ to fit in the width of the screen! Oh noooo!
 
-![Homer Simpson saying "oh no" in despair](https://media.giphy.com/media/xT5LMLMPdRh2VRNVLi/giphy.gif)
+<img src='https://media.giphy.com/media/xT5LMLMPdRh2VRNVLi/giphy.gif' style='max-width: 100%' alt='Homer Simpsons saying "oh no" in despair.'>
+</img>
 
 We can fix this with a simple trick. If we set the item element's `width` and `height` to `min-width` and `min-height` it will prevent flexbox from overriding our css above.
 
@@ -107,7 +108,7 @@ pretty simple eh? If you inspect the source code you will see some extra goodies
   }
 ```
 
-If you want to turn off the scroll bar you can also add this in your css:
+If you're in a browser you'll see scroll bars. If you want to turn that off you can also add this in your css:
 
 ```
   .container::-webkit-scrollbar {
