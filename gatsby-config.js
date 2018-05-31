@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://www.alexlearns.org',
     title: 'Alex Beeken',
-    subtitle: 'Software Engineer',
+    subtitle: 'Alex Beeken is a Software Engineer in Portland, OR who is trying to round out his practical coding experience with more formal CS study.',
     copyright: '© 2018 All rights reserved.',
     disqusShortname: '',
     menu: [
