@@ -2,7 +2,7 @@ module.exports = {
   courses: [
     {
       name: 'Linear Algebra',
-      unitsCompleted: 1,
+      unitsCompleted: 2,
       units: 16
     },
     {
