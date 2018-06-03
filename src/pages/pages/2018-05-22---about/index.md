@@ -20,7 +20,7 @@ I moved back to Portland in Fall of 2017 where I've been working on personal pro
 
 Here's a bunch of things that I've done if you want to creep on me more:
 
-- [Spotlife](http://www.splotlife.club)
+- [Spotlife](http://spotlife.club)
 - [General Youtube](https://www.youtube.com/channel/UC-s3pM-zRauVNJ32Lce1ujQ)
 - [Mr. Beeken](https://www.youtube.com/channel/UCtZ04kW3xThhfO4PCfvGaNQ)
 - [Soundcloud](https://soundcloud.com/aeb242)
