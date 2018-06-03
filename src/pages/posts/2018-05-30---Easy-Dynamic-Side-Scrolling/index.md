@@ -11,7 +11,7 @@ description: "Sometimes we need to be able to scroll through a long list. We nee
 ---
 
 Say we have a list of things that we want to make horizontally scrollable.
-```
+```html
 <div class='container'>
   <div class='item'>1</div>
   <div class='item'>2</div>
@@ -25,7 +25,7 @@ Say we have a list of things that we want to make horizontally scrollable.
 
 Let's make the items boxes have borders so we can see them. Let's make them `150px` tall and wide so we can fit a handful on the screen. Also, let's get them a margin so they aren't right next to each other and we can tell them apart. Like so:
 
-```
+```css
 .item {
   border: 2px solid black;
   width: 150px;
@@ -42,7 +42,7 @@ Now each box will look like this:
 
 The container should be the same height as the boxes and arrange them into a row. We'll use flexbox with `display: flex` to take care of some of the grid behavior for us. `flex-direction: row` tells the browser we want our boxes to stack horizontally. `overflow-x: scroll` let's us scroll sideways when the content expands beyond the container width. `overflow-y: hidden` turns off scrolling for the up/down direction so we don't up with confusing multidirectional scrolling if one of our boxes is a little too tall.
 
-```
+```css
 .container {
   height: 190px; (150px height + 20px top/bottom margin)
   display: flex;
@@ -75,7 +75,7 @@ But hey, this isn't scrollable and it's __compressing the boxes__ trying to fit 
 
 We can fix this with a simple trick. If we set the item element's `width` and `height` to `min-width` and `min-height` it will prevent flexbox from overriding our css above.
 
-```
+```css
   .item {
     border: 2px solid black;
     min-width: 150px;
@@ -101,7 +101,7 @@ which looks like this:
 
 pretty simple eh? If you inspect the source code you will see some extra goodies that I added to work with Lumen's (my blog framework) way of displaying margins. This is what I added:
 
-```
+```css
   .parent {
     max-width: 40rem;
     margin: auto;
@@ -110,7 +110,7 @@ pretty simple eh? If you inspect the source code you will see some extra goodies
 
 If you're in a browser you'll see scroll bars. If you want to turn that off you can also add this in your css:
 
-```
+```css
   .container::-webkit-scrollbar {
     display: none;
   }
@@ -138,7 +138,7 @@ Looks a lot cleaner in my opinion:
 
 Full code for copy/pasting:
 
-```
+```html
 <style>
   .item {
     border: 2px solid black;
