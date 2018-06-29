@@ -27,11 +27,11 @@ I'll be starting at [Mammoth HR](https://www.mammothhr.com) in about a week. I'l
 <img src='https://media.giphy.com/media/tEG1nF1v7AL8A/giphy.gif' style='max-width: 100%' alt='A slow zoom in on Jackson Terry looking disappointed.'>
 </img>
 
-Or at least until it feels right to pick it back up. When I do have the energy, I'll be keeping it fun and light. For now, it's much more interesting to learn things that apply to work. The whole point was to gain more street cred for finding work anyway. So, this is all a good thing.
+Or at least until it feels right to pick it back up. When I do have the energy, I'll be keeping it fun and light. For now, it's much more interesting to write about things that apply to work. Learning is learning! (and work = money).
 
 ###Creating the Gem
 
-For the last week, I've been using my spare energy to get reacuainted with the world of Ruby and Rails. For example, I've been having a great time reading [The Rails 5 Way](https://www.amazon.com/Rails-Way-Addison-Wesley-Professional-Ruby/dp/0134657675) by [Obie Fernandez](https://twitter.com/obie?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor). It's been giving me a lot of little ideas for side projects like the following...
+For the last week, I've been using my spare energy to get reacquainted with the world of Ruby and Rails. For example, I've been having a great time reading [The Rails 5 Way](https://www.amazon.com/Rails-Way-Addison-Wesley-Professional-Ruby/dp/0134657675) by [Obie Fernandez](https://twitter.com/obie?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor). It's been giving me a lot of little ideas for side projects like the following...
 
 I was wondering if I could create a gem that adds a page to tell you which classes you've created in a Rails application. A much simplified version of [Rails ERD](https://github.com/voormedia/rails-erd).
 
@@ -54,6 +54,7 @@ Whiteboarder::Engine.routes.draw do
 end
 
 # controllers/home_controller
+
 module Whiteboarder
   class HomeController < ApplicationController
     def board
@@ -67,28 +68,34 @@ end
 and a simple template in `app/views/whiteboarder/home/board.html.haml`.
 
 ```html
+<!-- app/views/whiteboarder/home/board.html.erb -->
+
 <h1>
   WhiteBoarder
 </h1>
 
-<ul>
-  <%= @controllers.each do |controller| %>
-    <li>
-      <%= controller %>
-    </li>
-  <% end %>
-</ul>
+<div class='controllers'>
+  <ul>
+    <%= @controllers.each do |controller| %>
+      <li>
+        <%= controller %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
-<ul>
-  <%= @models.each do |models| %>
-    <li>
-      <%= models %>
-    </li>
-  <% end %>
-</ul>
+<div class='models'>
+  <ul>
+    <%= @models.each do |models| %>
+      <li>
+        <%= models %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 ```
 
-You'll notice that everything is *namespaced* inside of a mountable engine. This is to prevent classnames from leaking into the host application. Coding what is, essentially, a plugin can open up infinite potential for bugs. So we'll make sure that anything that is calling a Whiteboarder class will have to specify the Whiteboard prefix specifically, like so:
+You'll notice that everything is *namespaced* inside of a mountable engine. This is to prevent classnames from leaking into the host application. Coding a gem can open up infinite potential for naming bugs. So we'll make sure that anything that is calling a Whiteboarder class will have to specify the Whiteboard prefix specifically, like so:
 
 ```ruby
 WhiteBoarder::HomeController
@@ -98,6 +105,18 @@ is far less likely to be used by a host application than
 
 ```ruby
 HomeController
+```
+
+Thankfully most of this is handled automatically by the plugin generator and the configuration inside:
+
+```ruby
+# lib/whiteboarder/engine.rb
+
+module Whiteboarder
+  class Engine < ::Rails::Engine
+    isolate_namespace Whiteboarder
+  end
+end
 ```
 
 ###Manual Testing
@@ -115,6 +134,8 @@ Initially, I specified my computer's local gem directory using the `path` option
 So I decided to do a more realistic test and throw the gem up to github. I just used the github repo as the value of the handy `git` option in the gem specification.
 
 ```ruby
+# inside Gemfile
+
   gem 'whiteboarder', 
     git: 'https://github.com/alexbeeken/whiteboarder'
     # ref: '778a2302e32c2ca14c16fd038064f2cebf8db2ca'
@@ -130,14 +151,13 @@ If you don't provide a version string it will pull the latest gem version down w
 
 ```ruby
 # lib/whiteboarder/version.rb
+
 module Whiteboarder
   VERSION = '0.1.0'
 end
 ```
 
-Updating this constant with each commit is a pain in the butt though and not really the intended purpose for version strings.
-
-So, adding the `ref` option allowed me to tell Bundler to update the gem without actually updating the `VERSION` constant with every single commit.
+Updating this constant with each commit is a pain in the butt though and not really the intended purpose for version strings. So, adding the `ref` option allowed me to tell Bundler to update the gem without actually updating the `VERSION` constant with every single commit.
 
 ###Automated Testing
 
@@ -147,6 +167,7 @@ I started by making sure the engine was mounted inside our dummy app like so:
 
 ```ruby
 # test/dummy/config/routes.rb
+
 Rails.application.routes.draw do
   mount Whiteboarder::Engine => "/whiteboarder"
 end
@@ -156,6 +177,7 @@ Good. Just double checking. Let's test to make sure the route works. For simplic
 
 ```ruby
 # test/integration/navigation_test.rb
+
 require 'test_helper'
 
 class NavigationTest < ActionDispatch::IntegrationTest
