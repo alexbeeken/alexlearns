@@ -51,7 +51,6 @@ class Sidebar extends React.Component {
             <p className="sidebar__copyright">
               {copyright}
             </p>
-            <Progress />
           </div>
         </div>
       </div>

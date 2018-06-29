@@ -9,12 +9,18 @@ class Bridges extends React.Component {
     let renders = [];
     for (var i = 0; i < bridges.length; i++) {
       renders.push(
-        <Bridge name={bridges[i].name} key={i}/>
+        <Bridge 
+          name={ bridges[i].name }
+          key={ i }
+          selected={ false }
+        />
       );
     };
     return (
       <div className="bridges">
-        {renders}
+        <div className="menu">
+          { renders }
+        </div>
       </div>
     );
   }
