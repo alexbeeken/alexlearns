@@ -136,9 +136,9 @@ So I decided to do a more realistic test and throw the gem up to github. I just 
 ```ruby
 # inside Gemfile
 
-  gem 'whiteboarder', 
-    git: 'https://github.com/alexbeeken/whiteboarder'
-    # ref: '778a2302e32c2ca14c16fd038064f2cebf8db2ca'
+gem 'whiteboarder', 
+  git: 'https://github.com/alexbeeken/whiteboarder'
+  # ref: '778a2302e32c2ca14c16fd038064f2cebf8db2ca'
 ```
 
 I used the `ref` option to tell the parent app to update the gem when I ran `bundle install`. You normally want to lock down your gems using a version string, like so:
