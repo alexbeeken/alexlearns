@@ -41,7 +41,7 @@ I will call it **Whitebarder** because I use whiteboards to plan out my coding e
 
 So, following [this guide](http://guides.rubyonrails.org/engines.html) I created a gem using 
 ```bash
-rails plugin new --mountable
+$ rails plugin new --mountable
 ```
 
 I started by creating a root route, controller and view:
@@ -65,7 +65,7 @@ module Whiteboarder
 end
 ```
 
-and a simple template in `app/views/whiteboarder/home/board.html.haml`.
+and a simple template
 
 ```html
 <!-- app/views/whiteboarder/home/board.html.erb -->
