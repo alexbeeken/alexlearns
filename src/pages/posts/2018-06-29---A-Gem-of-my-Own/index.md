@@ -37,7 +37,10 @@ I was wondering if I could create a gem that allows you to mount a simple hello 
 
 A mountable engine is just like a regular Rails application in terms of structure. The main difference being how it is used. An engine (synonymous here with gem or plugin) provides features to a host application. This means adding additional routes, models, controllers or even it's own database migrations.
 
-So, following [this guide](http://guides.rubyonrails.org/engines.html) I created a gem using 
+See the full example code on [my github](https://github.com/alexbeeken/hello_world_gem). I was following [this guide](http://guides.rubyonrails.org/engines.html) from the Rails docs.
+
+
+I created a gem using 
 ```bash
 $ rails plugin new --mountable hello_world
 ```
