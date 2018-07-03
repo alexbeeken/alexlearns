@@ -1,6 +1,6 @@
 ---
 title: "A Gem of my Own"
-date: "2018-06-29"
+date: "2018-07-03"
 layout: post
 draft: false
 path: "/posts/a-gem-of-my-own/"
