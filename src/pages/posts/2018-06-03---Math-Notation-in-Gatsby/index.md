@@ -41,7 +41,7 @@ the kinky Markdown cousin of TeX. Markdown and LaTeX even seem like they have si
 <img src='https://media.giphy.com/media/BDQlULh7lBK12/giphy.gif' style='max-width: 300px; min-width: 300px' alt='The Ultimate Warrior running into a wrestling ring and bouncing around the sides like a buffoon.'>
 </img>
 
-a much faster LaTeX rendering library written by the amazing team at [Khan Academy](https://www.khanacademy.org/). 
+a speed focused LaTeX rendering library written by the amazing team at [Khan Academy](https://www.khanacademy.org/). 
 
 It's available as a markdown addon using [Remark](https://github.com/remarkjs/remark). Through it's plugin ecosystem, Remark extends the capability of Markdown to whatever your heart can code. Luckily we won't have to code anything. [There is already a plugin for KaTex available](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-transformer-remark).
 
