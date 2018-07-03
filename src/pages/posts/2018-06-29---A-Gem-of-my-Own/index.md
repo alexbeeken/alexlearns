@@ -8,10 +8,10 @@ category: "rails"
 tags:
   - "ruby"
   - "rails"
-description: "It's been too long since I've made a gem. I'm going to get some more practice by making a simple gem that visualizes some simple information about it's parent Rails app. Let's have some fun!"
+description: "It's been too long since I've made a gem. I'm going to get some more practice by setting up a simple gem and get it ready for the TDD."
 ---
 
-###Personal Update
+### Personal Update
 
 I have good news and bad news. 
 
@@ -29,19 +29,17 @@ I'll be starting at [Mammoth HR](https://www.mammothhr.com) in about a week. I'l
 
 Or at least until it feels right to pick it back up. When I do have the energy, I'll be keeping it fun and light. For now, it's much more interesting to write about things that apply to work. Learning is learning! (and work = money).
 
-###Creating the Gem
+### Creating the Gem
 
 For the last week, I've been using my spare energy to get reacquainted with the world of Ruby and Rails. For example, I've been having a great time reading [The Rails 5 Way](https://www.amazon.com/Rails-Way-Addison-Wesley-Professional-Ruby/dp/0134657675) by [Obie Fernandez](https://twitter.com/obie?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor). It's been giving me a lot of little ideas for side projects like the following...
 
-I was wondering if I could create a gem that adds a page to tell you which classes you've created in a Rails application. A much simplified version of [Rails ERD](https://github.com/voormedia/rails-erd).
+I was wondering if I could create a gem that allows you to mount a simple hello world page to any Rails application. 
 
-A mountable engine is just like a regular rails application in terms of structure. The main difference being how it is used. An engine (synonymous here with gem or plugin) provides features to a host application. This means adding additional routes, models, controllers or even it's own database migrations.
-
-I will call it **Whitebarder** because I use whiteboards to plan out my coding endeavors and just love whiteboards in general.
+A mountable engine is just like a regular Rails application in terms of structure. The main difference being how it is used. An engine (synonymous here with gem or plugin) provides features to a host application. This means adding additional routes, models, controllers or even it's own database migrations.
 
 So, following [this guide](http://guides.rubyonrails.org/engines.html) I created a gem using 
 ```bash
-$ rails plugin new --mountable
+$ rails plugin new --mountable hello_world
 ```
 
 I started by creating a root route, controller and view:
@@ -49,17 +47,16 @@ I started by creating a root route, controller and view:
 ```ruby
 # config/routes
 
-Whiteboarder::Engine.routes.draw do
-  root to: 'home#board'
+HelloWorld::Engine.routes.draw do
+  root to: 'home#index'
 end
 
-# controllers/home_controller
+# controllers/hello_world/home_controller
 
-module Whiteboarder
+module HelloWorld
   class HomeController < ApplicationController
-    def board
-      @controllers = ApplicationController.descendants
-      @models = ApplicationRecord.descendants
+    def index
+      @message = 'Hello World!'
     end
   end
 end
@@ -68,37 +65,17 @@ end
 and a simple template
 
 ```html
-<!-- app/views/whiteboarder/home/board.html.erb -->
+<!-- app/views/hello_world/home/index.html.erb -->
 
-<h1>
-  WhiteBoarder
-</h1>
-
-<div class='controllers'>
-  <ul>
-    <%= @controllers.each do |controller| %>
-      <li>
-        <%= controller %>
-      </li>
-    <% end %>
-  </ul>
-</div>
-
-<div class='models'>
-  <ul>
-    <%= @models.each do |models| %>
-      <li>
-        <%= models %>
-      </li>
-    <% end %>
-  </ul>
+<div class='hello-world'>
+  <%= @message %>
 </div>
 ```
 
-You'll notice that everything is *namespaced* inside of a mountable engine. This is to prevent classnames from leaking into the host application. Coding a gem can open up infinite potential for naming bugs. So we'll make sure that anything that is calling a Whiteboarder class will have to specify the Whiteboard prefix specifically, like so:
+You'll notice that everything is *namespaced* inside of a mountable engine. This is to prevent classnames from leaking into the host application. Coding a gem can open up infinite potential for naming bugs. So we'll make sure that anything that is calling a HelloWorld class will have to specify the HelloWorld namespace explicitly, like so:
 
 ```ruby
-WhiteBoarder::HomeController
+HelloWorld::HomeController
 ```
 
 is far less likely to be used by a host application than
@@ -110,21 +87,21 @@ HomeController
 Thankfully most of this is handled automatically by the plugin generator and the configuration inside:
 
 ```ruby
-# lib/whiteboarder/engine.rb
+# lib/hello_world/engine.rb
 
-module Whiteboarder
+module HelloWorld
   class Engine < ::Rails::Engine
-    isolate_namespace Whiteboarder
+    isolate_namespace HelloWorld
   end
 end
 ```
 
-###Manual Testing
+### Manual Testing
 
 For manual testing, we can mount the engine onto the host application by adding using the `mount` directive included in the rails routing DSL.
 
 ```ruby
-mount Whiteboarder::Engine => 'whiteboarder'
+mount HelloWorld::Engine => 'hello_world'
 ```
 
 This gem is meant to be used in development only, thankfully. To test it out, I added this gem to the `:development` gem group in one of my Rails projects' Gemfile.
@@ -136,30 +113,30 @@ So I decided to do a more realistic test and throw the gem up to github. I just 
 ```ruby
 # inside Gemfile
 
-gem 'whiteboarder', 
-  git: 'https://github.com/alexbeeken/whiteboarder'
-  # ref: '778a2302e32c2ca14c16fd038064f2cebf8db2ca'
+gem 'hello_world', 
+  git: 'https://github.com/alexbeeken/hello_world_gem'
+  # ref: 'd5e3033e24e6cd787ec05ec8bacbda6b2a7b80a8'
 ```
 
-I used the `ref` option to tell the parent app to update the gem when I ran `bundle install`. You normally want to lock down your gems using a version string, like so:
+I use the `ref` option to tell the parent app to update the gem whenever I run `bundle install`. You normally want to lock down your gems using a version string, like so:
 
 ```ruby
-gem 'rspec-rails', '~> 3.7'
+gem 'hello_world', '~> 0.1.0'
 ```
 
-If you don't provide a version string it will pull the latest gem version down when you run `bundle install`. Ruby will look for Whiteboarder's version number inside `whiteboarder.gemspec` in the repo. By default, though, the plugin generator will actually put the `Whiteboarder::VERSION` constant inside `lib/whiteboarder/version.rb`.
+If you don't provide a version string it will pull the latest gem version down when you run `bundle install`. Ruby will look for HelloWorld's version number inside `hello_world.gemspec` in the repo. By default, though, the plugin generator will actually put the `HelloWorld::VERSION` constant inside `lib/hello_world/version.rb`.
 
 ```ruby
-# lib/whiteboarder/version.rb
+# lib/hello_world/version.rb
 
-module Whiteboarder
+module HelloWorld
   VERSION = '0.1.0'
 end
 ```
 
-Updating this constant with each commit is a pain in the butt though and not really the intended purpose for version strings. So, adding the `ref` option allowed me to tell Bundler to update the gem without actually updating the `VERSION` constant with every single commit.
+Updating this constant with each commit is a pain in the butt though and not really the intended purpose for version strings. Normally, you want to wait to update the version string until a feature, bug fix or significant change is merged into master. Not on *every single commit*. Specifying the `ref` option allowed me to tell Bundler to update the gem code without having to update the `VERSION` constant.
 
-###Automated Testing
+### Automated Testing
 
 The rails plugin generator provides testing files to help get you started on testing including a dummy app folder where you can configure an example host app.
 
@@ -169,11 +146,11 @@ I started by making sure the engine was mounted inside our dummy app like so:
 # test/dummy/config/routes.rb
 
 Rails.application.routes.draw do
-  mount Whiteboarder::Engine => "/whiteboarder"
+  mount HelloWorld::Engine => 'hello_world'
 end
 ```
 
-Good. Just double checking. Let's test to make sure the route works. For simplicity, and because we only have 1 route to worry about, I'll put it in the generated `test/integration/navigation_test.rb` file.
+Just double checking. Let's test to make sure the route works. For simplicity, and because we only have 1 route to worry about, I'll put it in the generated `test/integration/navigation_test.rb` file.
 
 ```ruby
 # test/integration/navigation_test.rb
@@ -181,39 +158,26 @@ Good. Just double checking. Let's test to make sure the route works. For simplic
 require 'test_helper'
 
 class NavigationTest < ActionDispatch::IntegrationTest
-  test 'whiteboarder route mounts correctly' do
-    get '/whiteboarder'
+  test 'hello_world route mounts correctly' do
+    get '/hello_world'
     
     assert_response :success
   end
 end
 ```
 
-I setup an the following files to get a base case to test against.
-
-```ruby
-# test/dummy/app/controllers/example_controller.rb
-
-class ExampleController < ApplicationController
-  def index
-  end
-end
-
-# test/dummy/app/models/example.rb
-
-class Example < ApplicationRecord
-end
-```
-
-And a test to make sure our engine finds these classes and lists them on the `/whiteboarders` page.
+And I added a test to make sure our controller renders the correct message.
 
 ```ruby
 # added to test/integration/navigation_test.rb
 
-test 'whiteboarder route mounts correctly' do
-  get '/whiteboarder'
+test 'hello_World route mounts correctly' do
+  get '/hello_world'
 
-  assert_select 'controllers ul li', 'ExampleController'
-  assert_select 'models ul li', 'Example'
+  assert_select '.hello-world', 'Hello World!'
 end
 ```
+
+And this is a good place to stop. With manual tests and automated tests, development is off to a smooth start.
+
+Happy gem crafting!
