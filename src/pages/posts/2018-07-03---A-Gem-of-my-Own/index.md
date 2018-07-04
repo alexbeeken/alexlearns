@@ -174,7 +174,7 @@ And I added a test to make sure our controller renders the correct message.
 ```ruby
 # added to test/integration/navigation_test.rb
 
-test 'hello_World route mounts correctly' do
+test 'hello_World route renders correct message' do
   get '/hello_world'
 
   assert_select '.hello-world', 'Hello World!'
